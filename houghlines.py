@@ -12,7 +12,7 @@ def track_line(mask, x0, y0, x1, y1, max_gap, min_len):
     mx = np.minimum(x0,x1)
     my = np.minimum(y0,y1)
     lines = []
-    if dx > dy:
+    if dx >= dy:
         k = (y0 - y1) / (x0 - x1)
         size = gap = 0
         startx = endx = 0
